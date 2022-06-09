@@ -17,6 +17,13 @@ public class App {
         System.out.println("Desviacion Estandar: " + calcularStd(numeros, media));
     }
 
+    /**
+     * Metodo que calcula la desviacion estandar
+     * 
+     * @param numeros LList (Lista enlazada creada) de double
+     * @param media   valor de la media para esa lista
+     * @return Devuelve la desviacion estandar de la lista
+     */
     private static Double calcularStd(LList numeros, Double media) {
         Double sumatoria = 0.0;
         for (Double num : numeros) {
@@ -26,6 +33,12 @@ public class App {
         return Math.round(res * 10000.0) / 10000.0;
     }
 
+    /**
+     * Metodo que calcula la media
+     * 
+     * @param numeros LList (Lista enlazada creada) de double
+     * @return Devuelve la media de la lista
+     */
     private static Double calcularMedia(LList numeros) {
         Double sumatoria = 0.0;
         for (Double num : numeros) {
@@ -35,6 +48,20 @@ public class App {
         return Math.round(res * 10000.0) / 10000.0;
     }
 
+    /**
+     * Metodo que dado un archivo, convierte los numeros alli presentes en una
+     * LList(Lista enlazada)
+     * El archivo a entregar debe dar numeros por cada linea
+     * ejemplo:
+     * 11
+     * 08
+     * ..
+     * 12
+     * 
+     * @param archivo Archivo a convertir en LList
+     * @return LList de los numeros encontrados en el archivo
+     * @throws Exception
+     */
     public static LList lectorArchivo(File archivo) throws Exception {
         LList numeros = new LList();
         Scanner obj = new Scanner(archivo);
