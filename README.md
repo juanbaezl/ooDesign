@@ -10,9 +10,9 @@ También encontrara una implementación propia de una LinkedList.
 
 ### LOC/h
 
-Para este taller se hicieron 90 líneas de código, en 2 horas.
+Para este taller se hicieron 197 líneas de código, en 3 horas.
 
-**45 LOC/h**
+**65.67 LOC/h**
 
 ### Prerrequisitos
 
@@ -32,7 +32,7 @@ mvn package
 Para ejecutarlo, se debe hacer de la siguiente forma
 
 ```
-$ java -cp "target\classes" edu.escuelaing.arem.ASE.app.CountLoc [Archivo]
+$ java -cp "target\classes" edu.escuelaing.arem.ASE.app.App [Archivo]
 ```
 
 El archivo debe tener la estructura como en los siguientes archivos:
