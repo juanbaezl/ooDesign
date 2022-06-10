@@ -5,10 +5,10 @@ import java.util.Iterator;
 /**
  * Clase de implementacion propia de una LinkedList
  */
-public class LList implements Iterable<Double> {
+public class LList<E> implements Iterable<E> {
 
-    private Nodo head;
-    private Nodo tail;
+    private Nodo<E> head;
+    private Nodo<E> tail;
     private int longitud;
 
     /**
@@ -23,9 +23,9 @@ public class LList implements Iterable<Double> {
      * 
      * @param num Valor Double a insertar
      */
-    public void add(Double num) {
+    public void add(E num) {
         this.longitud++;
-        Nodo nuevo = new Nodo(num, null);
+        Nodo<E> nuevo = new Nodo<E>(num, null);
         if (head == null) {
             this.head = nuevo;
             this.tail = nuevo;
@@ -40,7 +40,7 @@ public class LList implements Iterable<Double> {
      * 
      * @return Nodo referenciado como cabeza
      */
-    public Nodo getHead() {
+    public Nodo<E> getHead() {
         return head;
     }
 
@@ -49,7 +49,7 @@ public class LList implements Iterable<Double> {
      * 
      * @param head Nuevo nodo a ser cabeza
      */
-    public void setHead(Nodo head) {
+    public void setHead(Nodo<E> head) {
         this.head = head;
     }
 
@@ -58,7 +58,7 @@ public class LList implements Iterable<Double> {
      * 
      * @return Nodo referenciado como cola
      */
-    public Nodo getTail() {
+    public Nodo<E> getTail() {
         return tail;
     }
 
@@ -67,7 +67,7 @@ public class LList implements Iterable<Double> {
      * 
      * @param tail Nuevo Nodo a ser cola
      */
-    public void setTail(Nodo tail) {
+    public void setTail(Nodo<E> tail) {
         this.tail = tail;
     }
 
@@ -82,7 +82,7 @@ public class LList implements Iterable<Double> {
 
     @Override
     public String toString() {
-        Nodo actual = head;
+        Nodo<E> actual = head;
         String res = "[";
         while (actual != null) {
             res += actual.getNum() + ",";
@@ -94,9 +94,9 @@ public class LList implements Iterable<Double> {
     }
 
     @Override
-    public Iterator<Double> iterator() {
-        Iterator<Double> iterator = new Iterator<Double>() {
-            private Nodo actual;
+    public Iterator<E> iterator() {
+        Iterator<E> iterator = new Iterator<E>() {
+            private Nodo<E> actual;
 
             @Override
             public boolean hasNext() {
@@ -104,7 +104,7 @@ public class LList implements Iterable<Double> {
             }
 
             @Override
-            public Double next() {
+            public E next() {
                 if (actual == null) {
                     actual = head;
                 } else {

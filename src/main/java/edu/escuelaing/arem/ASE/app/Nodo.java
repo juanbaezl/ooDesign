@@ -3,9 +3,9 @@ package edu.escuelaing.arem.ASE.app;
 /**
  * Clase que crea nodos dados un numero
  */
-public class Nodo {
-    private Double num;
-    private Nodo siguiente;
+public class Nodo<E> {
+    private E num;
+    private Nodo<E> siguiente;
 
     /**
      * Constructor de nodo
@@ -13,7 +13,7 @@ public class Nodo {
      * @param num       Valor Double del nodo
      * @param siguiente Nodo enlazado siguiente
      */
-    public Nodo(Double num, Nodo siguiente) {
+    public Nodo(E num, Nodo<E> siguiente) {
         this.num = num;
         this.siguiente = siguiente;
     }
@@ -23,7 +23,7 @@ public class Nodo {
      * 
      * @return Valor Double
      */
-    public Double getNum() {
+    public E getNum() {
         return num;
     }
 
@@ -32,7 +32,7 @@ public class Nodo {
      * 
      * @param num Double a establecer
      */
-    public void setNum(Double num) {
+    public void setNum(E num) {
         this.num = num;
     }
 
@@ -41,7 +41,7 @@ public class Nodo {
      * 
      * @return Nodo
      */
-    public Nodo getSiguiente() {
+    public Nodo<E> getSiguiente() {
         return siguiente;
     }
 
@@ -50,7 +50,7 @@ public class Nodo {
      * 
      * @param siguiente nodo a establecer como siguiente
      */
-    public void setSiguiente(Nodo siguiente) {
+    public void setSiguiente(Nodo<E> siguiente) {
         this.siguiente = siguiente;
     }
 

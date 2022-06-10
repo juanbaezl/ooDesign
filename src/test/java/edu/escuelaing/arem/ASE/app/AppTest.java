@@ -35,7 +35,7 @@ public class AppTest {
     public void deberiaEncontrarMediaArchivo1() {
         try {
             File doc = new File("num1.txt");
-            LList numeros = App.lectorArchivo(doc);
+            LList<Double> numeros = App.lectorArchivo(doc);
             Assert.assertEquals((Double) 550.6,
                     App.calcularMedia(numeros));
         } catch (Exception e) {
@@ -47,7 +47,7 @@ public class AppTest {
     public void deberiaEncontrarMediaArchivo2() {
         try {
             File doc = new File("num2.txt");
-            LList numeros = App.lectorArchivo(doc);
+            LList<Double> numeros = App.lectorArchivo(doc);
             Assert.assertEquals((Double) 60.32,
                     App.calcularMedia(numeros));
         } catch (Exception e) {
@@ -59,7 +59,7 @@ public class AppTest {
     public void deberiaEncontrarStdArchivo1() {
         try {
             File doc = new File("num1.txt");
-            LList numeros = App.lectorArchivo(doc);
+            LList<Double> numeros = App.lectorArchivo(doc);
             Assert.assertEquals((Double) 572.0268,
                     App.calcularStd(numeros, 550.6));
         } catch (Exception e) {
@@ -71,7 +71,7 @@ public class AppTest {
     public void deberiaEncontrarStdArchivo2() {
         try {
             File doc = new File("num2.txt");
-            LList numeros = App.lectorArchivo(doc);
+            LList<Double> numeros = App.lectorArchivo(doc);
             Assert.assertEquals((Double) 62.2558,
                     App.calcularStd(numeros, 60.32));
         } catch (Exception e) {
