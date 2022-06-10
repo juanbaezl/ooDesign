@@ -12,6 +12,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         File archivo = new File(args[0]);
         LList numeros = lectorArchivo(archivo);
+        System.out.println(numeros);
         Double media = calcularMedia(numeros);
         System.out.println("Media: " + media);
         System.out.println("Desviacion Estandar: " + calcularStd(numeros, media));
@@ -24,7 +25,7 @@ public class App {
      * @param media   valor de la media para esa lista
      * @return Devuelve la desviacion estandar de la lista
      */
-    private static Double calcularStd(LList numeros, Double media) {
+    public static Double calcularStd(LList numeros, Double media) {
         Double sumatoria = 0.0;
         for (Double num : numeros) {
             sumatoria += Math.pow(num - media, 2);
@@ -39,13 +40,13 @@ public class App {
      * @param numeros LList (Lista enlazada creada) de double
      * @return Devuelve la media de la lista
      */
-    private static Double calcularMedia(LList numeros) {
+    public static Double calcularMedia(LList numeros) {
         Double sumatoria = 0.0;
         for (Double num : numeros) {
             sumatoria += num;
         }
         Double res = sumatoria / numeros.getLongitud();
-        return Math.round(res * 10000.0) / 10000.0;
+        return Math.round(res * 100.0) / 100.0;
     }
 
     /**
