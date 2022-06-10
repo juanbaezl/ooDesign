@@ -1,7 +1,8 @@
 package edu.escuelaing.arem.ASE.app;
 
 /**
- * Clase que crea nodos dados un numero
+ * Clase que crea nodos dado un objeto E
+ * <E> hace referencia a un tipo generico que se encuentre en este nodo
  */
 public class Nodo<E> {
     private E num;
@@ -10,7 +11,7 @@ public class Nodo<E> {
     /**
      * Constructor de nodo
      * 
-     * @param num       Valor Double del nodo
+     * @param num       Valor E del nodo
      * @param siguiente Nodo enlazado siguiente
      */
     public Nodo(E num, Nodo<E> siguiente) {
@@ -21,7 +22,7 @@ public class Nodo<E> {
     /**
      * Retorna el valor del nodo
      * 
-     * @return Valor Double
+     * @return Valor E
      */
     public E getNum() {
         return num;
@@ -30,7 +31,7 @@ public class Nodo<E> {
     /**
      * Establece el valor del nodo
      * 
-     * @param num Double a establecer
+     * @param num E a establecer
      */
     public void setNum(E num) {
         this.num = num;

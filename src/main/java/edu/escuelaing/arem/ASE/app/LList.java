@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 /**
  * Clase de implementacion propia de una LinkedList
+ * <E> hace referencia a un tipo generico que se encuentre en esta lista
  */
 public class LList<E> implements Iterable<E> {
 
@@ -21,7 +22,7 @@ public class LList<E> implements Iterable<E> {
     /**
      * Metodo que inserta un nuevo valor
      * 
-     * @param num Valor Double a insertar
+     * @param num Valor E a insertar
      */
     public void add(E num) {
         this.longitud++;

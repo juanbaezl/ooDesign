@@ -105,7 +105,7 @@ Una vez se realice este comando, se debe buscar en la siguiente ruta "target\sit
 
 ## Fecha
 
-9 de Junio, 2022
+10 de Junio, 2022
 
 ## Licencia
 
